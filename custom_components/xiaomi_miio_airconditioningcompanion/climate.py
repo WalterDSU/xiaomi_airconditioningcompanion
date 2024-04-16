@@ -41,7 +41,7 @@ from homeassistant.const import (
     CONF_TIMEOUT,
     CONF_TOKEN,
     STATE_ON,
-    TEMP_CELSIUS,
+    UnitOfTemperature,
 )
 from homeassistant.core import callback
 from homeassistant.exceptions import PlatformNotReady
@@ -427,7 +427,7 @@ class XiaomiAirConditioningCompanion(ClimateEntity):
     @property
     def temperature_unit(self):
         """Return the unit of measurement."""
-        return TEMP_CELSIUS
+        return UnitOfTemperature.CELSIUS
 
     @property
     def current_temperature(self):
